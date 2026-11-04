@@ -9,5 +9,5 @@ scripts:
 script: |
   echo "y" | "$ANDROID_HOME/tools/bin/sdkmanager" --licenses
   - name: Build debug APK
-script: |
- ./gradlew assembleDebug
+ script: |
+           ./gradlew assembleDebug
