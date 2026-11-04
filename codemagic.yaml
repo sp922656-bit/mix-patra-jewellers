@@ -4,3 +4,17 @@ workflows:
     environment:
       groups:
         - android_sign
+workflows:
+  android-workflow:
+    name: Android Workflow
+    environment:
+      groups:
+        - android_sign
+    scripts:
+      - name: Build debug APK
+        script: |
+          chmod +x gradlew
+          ./gradlew assembleDebug
+    artifacts:
+      - app/build/outputs/apk/**/*.apk
+      
