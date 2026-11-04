@@ -4,10 +4,3 @@ workflows:
     environment:
       groups:
         - android_sign
-    scripts:
-      - name: Set up SDK license script
-        script: |
-          echo "y" | "$ANDROID_HOME/tools/bin/sdkmanager" --licenses
-      - name: Build debug APK
-        script: |
-          ./gradlew assembleDebug
